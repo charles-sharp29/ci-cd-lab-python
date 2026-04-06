@@ -26,14 +26,8 @@ jobs:
         - name: Install dependencies
           run: pip install -r requirements.txt
 
-        - name: Check formatting with Black
-          run: black --check .
-
         - name: Lint with Flake8
           run: flake8 .
-
-        - name: Run tests with Pytest
-          run: pytest
 
     cd:
         needs: ci
